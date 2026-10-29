@@ -16,25 +16,24 @@ in-page questionnaire → inline success state) all carry over.
 > the demo and the deck are deliberately on different indications. The demo is the reusable NCFB
 > asset; PBH stays in the deck.
 
-## What NCFB is (plain-language anchor, from the APSU fact sheet)
-- **NCFB = non-cystic fibrosis bronchiectasis** — a chronic lung condition where the bronchial tubes
-  (airways) become scarred and widened; mucus pools in the damaged areas and the lungs become more
-  prone to infection, and recurrent infections drive a cycle of further airway damage — *not* caused
-  by cystic fibrosis.
+## What NCFB is (plain-language anchor, from the Tampa General Hospital page)
+- **NCFB = non-cystic fibrosis bronchiectasis** — a chronic, inflammatory lung condition in which the
+  airways (bronchi) become permanently widened; excess mucus builds up, can harbor bacteria, and
+  makes the lungs more susceptible to infection — and it is *not* the genetic, cystic-fibrosis type.
 - It's a **generic** demo, so copy stays disease-education-flavored and neutral; it does **not**
   carry Amylyx product specifics.
 
 > **Compliance / review — read before any client-facing use.** This is **demo copy, not approved
 > material.** The in-page review flags were removed for a clean demo presentation, but the items they
 > marked still need confirmation before this goes in front of a client:
-> - **Clinical copy and the "Facts About NCFB" stat cards are sourced** from the Australian
->   Paediatric Surveillance Unit (APSU) fact sheet *"Non-Cystic Fibrosis Bronchiectasis — Information
->   for Parents"* (cited in-page). No figures were invented. **Two caveats:** that source is
->   **Australian** and **paediatric** ("Information for Parents"), so geography-specific claims from it
->   (e.g. Australian prevalence, Indigenous populations) were deliberately **left off** the page, and
->   all clinical copy should still be **validated against a U.S. clinical source**.
-> - The page is written **age-neutral** (self or a loved one, including a child) even though the
->   source is paediatric; confirm the intended audience for this pitch.
+> - **Clinical copy and the "Facts About NCFB" stat cards are sourced** from Tampa General Hospital's
+>   patient-education page *"Non-Cystic Fibrosis Bronchiectasis"*
+>   (<https://www.tgh.org/institutes-and-services/conditions/non-cystic-fibrosis-bronchiectasis>),
+>   cited in-page. No figures were invented — the stat band uses plain descriptive facts (2 types,
+>   months–years, chronic, treatable) rather than invented numbers. It's a single U.S. hospital's
+>   education page, so still have a clinical reviewer confirm it before client-facing use.
+> - The page is written **age-neutral** (self or a loved one). Confirm the intended audience for this
+>   pitch.
 > - **Demo placeholder values** that still need confirming with **Jenna / Mark / Rob**: the partner
 >   line (set to "In Partnership with **Amylyx Pharmaceuticals**" for the demo), the no-cost offer
 >   wording, the qualifying questions, the consent copy, and the phone number (AmbitCare default
