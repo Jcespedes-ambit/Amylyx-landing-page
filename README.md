@@ -25,20 +25,20 @@ in-page questionnaire → inline success state) all carry over.
   carry Amylyx product specifics.
 
 > **Compliance / review — read before any client-facing use.** This is **demo copy, not approved
-> material.**
-> - **Clinical copy and the "Facts About NCFB" stat cards are now sourced** from the Australian
+> material.** The in-page review flags were removed for a clean demo presentation, but the items they
+> marked still need confirmation before this goes in front of a client:
+> - **Clinical copy and the "Facts About NCFB" stat cards are sourced** from the Australian
 >   Paediatric Surveillance Unit (APSU) fact sheet *"Non-Cystic Fibrosis Bronchiectasis — Information
->   for Parents."* No figures were invented. **Two caveats:** that source is **Australian** and
->   **paediatric** ("Information for Parents"), so geography-specific claims from it (e.g. Australian
->   prevalence, Indigenous populations) were deliberately **left off** the page, and all clinical copy
->   should still be **validated against a U.S. clinical source** before it goes in front of a client.
->   The stat band carries a visible `verify for U.S. use` flag and cites the source in-page.
+>   for Parents"* (cited in-page). No figures were invented. **Two caveats:** that source is
+>   **Australian** and **paediatric** ("Information for Parents"), so geography-specific claims from it
+>   (e.g. Australian prevalence, Indigenous populations) were deliberately **left off** the page, and
+>   all clinical copy should still be **validated against a U.S. clinical source**.
 > - The page is written **age-neutral** (self or a loved one, including a child) even though the
 >   source is paediatric; confirm the intended audience for this pitch.
-> - Remaining **non-clinical** placeholders are still flagged inline (amber `.flag`): the partner line
->   ("In Partnership with **[Partner — CONFIRM]**"), the offer wording, the qualifying questions,
->   consent copy, the phone number (AmbitCare default), the hero headline (`refine`), and the three
->   `placeholder` topic-card articles — all pending confirmation with **Jenna / Mark / Rob**.
+> - **Demo placeholder values** that still need confirming with **Jenna / Mark / Rob**: the partner
+>   line (set to "In Partnership with **Amylyx Pharmaceuticals**" for the demo), the no-cost offer
+>   wording, the qualifying questions, the consent copy, and the phone number (AmbitCare default
+>   `1-877-584-8995`). The three "Explore Topics" cards link to articles that don't exist yet.
 > - Imagery is intentionally CSS/gradient only (no licensed stock photos); the hero uses a gradient
 >   rather than the Danon mother-and-son photo, which is off-indication for a lung condition.
 

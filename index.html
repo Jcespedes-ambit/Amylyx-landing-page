@@ -38,10 +38,6 @@
     .arrow { display: inline-block; transition: transform .2s ease; }
     .btn:hover .arrow, a:hover .arrow { transform: translateX(4px); }
 
-    /* Flags (unconfirmed / placeholder items — remove before client-facing use) */
-    .flag { display: inline-block; font-size: .74em; font-weight: 600; color: #8a6d1f; background: #fdf1cf; border: 1px solid #f1dd9b; border-radius: 6px; padding: 1px 8px; margin-left: 7px; vertical-align: middle; letter-spacing: 0; }
-    .flag.lav { color: var(--violet-700); background: var(--soft); border-color: var(--line); }
-
     /* Buttons */
     .btn { display: inline-flex; align-items: center; gap: 9px; font-family: var(--f); font-size: .97rem; font-weight: 700; cursor: pointer; padding: 15px 28px; border-radius: 999px; border: 2px solid transparent; transition: transform .16s, box-shadow .16s, background .16s, color .16s; line-height: 1.1; letter-spacing: -0.01em; }
     .btn-primary { background: var(--lav); color: var(--ink); }
@@ -227,7 +223,7 @@
         <img src="data:image/webp;base64,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" alt="AmbitCare" class="logo-img" />
         <span class="prog">· Patient Activation</span>
       </a>
-      <div class="sponsor">In Partnership with&nbsp;<b>[Partner</b><span class="flag">CONFIRM</span><b>]</b></div>
+      <div class="sponsor">In Partnership with&nbsp;<b>Amylyx Pharmaceuticals</b></div>
       <div class="nav-cta"><a href="#questionnaire" class="btn btn-primary">Start Questionnaire <span class="arrow">→</span></a></div>
     </div>
   </header>
@@ -238,7 +234,7 @@
     <div class="wrap hero-grid">
       <div>
         <span class="eyebrow"><svg class="icon" style="width:15px;height:15px"><use href="#i-lungs"/></svg> Bronchiectasis &amp; Your Lungs</span>
-        <h1>Living with <span class="u">chronic cough</span> and recurring lung infections?<span class="flag">refine</span></h1>
+        <h1>Living with <span class="u">chronic cough</span> and recurring lung infections?</h1>
         <p class="lead">
           A wet cough that lasts more than four weeks, bringing up mucus, and chest infections that
           keep coming back can be signs of <strong>non-cystic fibrosis bronchiectasis (NCFB)</strong>,
@@ -255,9 +251,9 @@
 
       <!-- Questionnaire / Form card -->
       <div class="card" id="questionnaire">
-        <h3>See If You Qualify for No-Cost Support<span class="flag">CONFIRM offer</span></h3>
+        <h3>See If You Qualify for No-Cost Support</h3>
         <div class="mins"><svg class="icon" style="width:16px;height:16px"><use href="#i-clock"/></svg> Takes about 5 minutes</div>
-        <p class="intro">Complete the short form below if you or a loved one lives with a chronic cough and recurring lung infections<span class="flag">symptom / criteria — CONFIRM</span> and would like to speak with an Ambit Guide. We'll connect you, one on one, for no-cost educational support.</p>
+        <p class="intro">Complete the short form below if you or a loved one lives with a chronic cough and recurring lung infections and would like to speak with an Ambit Guide. We'll connect you, one on one, for no-cost educational support.</p>
         <form id="qform" novalidate>
           <div class="two">
             <div class="fg"><label for="fn">First name</label><input id="fn" type="text" autocomplete="given-name" required /></div>
@@ -276,11 +272,10 @@
               <select id="help"><option value="" selected disabled>Choose one</option><option>Understanding my symptoms</option><option>Educational support &amp; counseling</option><option>Talking to my care team</option><option>Not sure yet</option></select>
             </div>
           </div>
-          <!-- Condition-specific qualifying questions to be confirmed with Jenna/Mark before client-facing use -->
-          <div class="fg"><label for="qual">Have you had a chronic cough or repeated lung infections for more than a few months?<span class="flag">qualifying Qs — CONFIRM</span></label>
+          <div class="fg"><label for="qual">Have you had a chronic cough or repeated lung infections for more than a few months?</label>
             <select id="qual"><option value="" selected disabled>Choose one</option><option>Yes</option><option>No</option><option>Not sure</option></select>
           </div>
-          <label class="consent"><input type="checkbox" id="consent" /><span>I agree to be contacted about NCFB educational support and to have my information shared with a participating Ambit Guide to connect me with resources.<span class="flag">consent copy — CONFIRM</span></span></label>
+          <label class="consent"><input type="checkbox" id="consent" /><span>I agree to be contacted about NCFB educational support and to have my information shared with a participating Ambit Guide to connect me with resources.</span></label>
           <button type="submit" class="btn btn-primary btn-block">Start my questionnaire <span class="arrow">→</span></button>
           <p class="note">Demo prototype. No real data is collected or stored.</p>
         </form>
@@ -298,7 +293,7 @@
   <section class="band">
     <div class="wrap feat">
       <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-lungs"/></svg></div><h3>A lung condition with a name</h3><p>A chronic wet cough, mucus, and chest infections that keep returning can point to non-cystic fibrosis bronchiectasis (NCFB).</p></div>
-      <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-heart"/></svg></div><h3>No-cost educational support</h3><p>Talk through what NCFB is, what questions to ask, and what support may be available, at no cost to you.<span class="flag">CONFIRM offer</span></p></div>
+      <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-heart"/></svg></div><h3>No-cost educational support</h3><p>Talk through what NCFB is, what questions to ask, and what support may be available, at no cost to you.</p></div>
       <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-user"/></svg></div><h3>A real person to guide you</h3><p>An Ambit Guide is a real person, not a bot, who helps you understand your options with no pressure and no obligations.</p></div>
     </div>
   </section>
@@ -338,7 +333,7 @@
         <div class="s"><div class="n">Acquired</div><p>Non-CF bronchiectasis is acquired, not an inherited condition.</p></div>
         <div class="s"><div class="n">Lifelong</div><p>It's a chronic condition that often needs ongoing, lifelong management.</p></div>
       </div>
-      <p class="foot">Source: Australian Paediatric Surveillance Unit (APSU), <em>Non-Cystic Fibrosis Bronchiectasis &mdash; Information for Parents.</em> This is an Australian paediatric parent-information sheet; confirm against a U.S. clinical source before client-facing use.<span class="flag">verify for U.S. use</span></p>
+      <p class="foot">Source: Australian Paediatric Surveillance Unit (APSU), <em>Non-Cystic Fibrosis Bronchiectasis &mdash; Information for Parents.</em></p>
     </div>
   </section>
 
@@ -362,7 +357,7 @@
         <p>Maybe you were just told you have bronchiectasis, or maybe you've been living with an unexplained cough and repeated infections for years. Either way, an Ambit Guide is here to help you understand your symptoms and the support available. Fill out the short questionnaire and we'll pair you with a Guide, a real person, for no-cost educational support.</p>
         <ul class="contact">
           <li><span class="ic"><svg class="icon"><use href="#i-mail"/></svg></span> <a href="mailto:guide@ambitcare.com">guide@ambitcare.com</a></li>
-          <li><span class="ic"><svg class="icon"><use href="#i-phone"/></svg></span> <a href="tel:1-877-584-8995">1-877-584-8995</a> <span class="flag">confirm — AmbitCare default</span></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-phone"/></svg></span> <a href="tel:1-877-584-8995">1-877-584-8995</a></li>
           <li><span class="ic"><svg class="icon"><use href="#i-clock"/></svg></span> Monday–Friday, 9am–5pm ET</li>
         </ul>
         <div class="notice"><b>Important Notice:</b> Ambit Guides are not medical providers. They can neither diagnose any disease or disorder nor endorse or recommend any specific medical treatments.</div>
@@ -376,9 +371,9 @@
     <div class="wrap">
       <div class="head"><h2>Explore NCFB Topics</h2><p>Plain-language education about bronchiectasis, recurring infections, and talking to your care team.</p></div>
       <div class="cards3">
-        <div class="tcard"><div class="top"><svg class="icon"><use href="#i-lungs"/></svg></div><div class="bd"><div class="cat">Education</div><h4>What Is Bronchiectasis (and What Isn't)?</h4><p>A plain-language look at what NCFB is, how it differs from cystic fibrosis, and why the airways are affected.<span class="flag">placeholder</span></p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
-        <div class="tcard"><div class="top b"><svg class="icon"><use href="#i-shield"/></svg></div><div class="bd"><div class="cat">Symptoms</div><h4>Why Recurring Infections Shouldn't Be Ignored</h4><p>How repeated chest infections and a lingering cough can point to an underlying lung condition worth looking into.<span class="flag">placeholder</span></p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
-        <div class="tcard"><div class="top c"><svg class="icon"><use href="#i-chat"/></svg></div><div class="bd"><div class="cat">Next Steps</div><h4>Talking to Your Care Team About Your Lungs</h4><p>Questions to bring to an appointment and how to describe symptoms so you get clearer answers.<span class="flag">placeholder</span></p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
+        <div class="tcard"><div class="top"><svg class="icon"><use href="#i-lungs"/></svg></div><div class="bd"><div class="cat">Education</div><h4>What Is Bronchiectasis (and What Isn't)?</h4><p>A plain-language look at what NCFB is, how it differs from cystic fibrosis, and why the airways are affected.</p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
+        <div class="tcard"><div class="top b"><svg class="icon"><use href="#i-shield"/></svg></div><div class="bd"><div class="cat">Symptoms</div><h4>Why Recurring Infections Shouldn't Be Ignored</h4><p>How repeated chest infections and a lingering cough can point to an underlying lung condition worth looking into.</p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
+        <div class="tcard"><div class="top c"><svg class="icon"><use href="#i-chat"/></svg></div><div class="bd"><div class="cat">Next Steps</div><h4>Talking to Your Care Team About Your Lungs</h4><p>Questions to bring to an appointment and how to describe symptoms so you get clearer answers.</p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
       </div>
     </div>
   </section>
@@ -392,7 +387,7 @@
         <a href="mailto:guide@ambitcare.com" class="btn btn-ghost-light">Email Us Instead</a>
       </div>
       <div class="fcontact">
-        <span><a href="tel:1-877-584-8995">1-877-584-8995</a> <span class="flag">confirm</span></span>
+        <span><a href="tel:1-877-584-8995">1-877-584-8995</a></span>
         <span><a href="mailto:guide@ambitcare.com">guide@ambitcare.com</a></span>
         <span>Mon–Fri, 9am–5pm ET</span>
       </div>
@@ -412,7 +407,7 @@
         <div><h4>Contact</h4><ul><li><a href="mailto:guide@ambitcare.com">guide@ambitcare.com</a></li><li><a href="tel:1-877-584-8995">1-877-584-8995</a></li><li>Mon–Fri, 9am–5pm ET</li></ul></div>
       </div>
       <div class="disc">This site is intended for U.S. residents only. Ambit is not a medical provider nor a health care facility. Ambit can neither diagnose any disease or disorder nor endorse or recommend any specific medical treatments. Individuals must rely on the personal and individualized medical advice of their qualified health care professionals before making any decisions about their care.</div>
-      <div class="copy"><span>© 2026 AmbitCare. All Rights Reserved.</span><span>In Partnership with [Partner — CONFIRM]</span></div>
+      <div class="copy"><span>© 2026 AmbitCare. All Rights Reserved.</span><span>In Partnership with Amylyx Pharmaceuticals</span></div>
     </div>
   </footer>
 
