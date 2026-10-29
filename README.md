@@ -16,23 +16,29 @@ in-page questionnaire → inline success state) all carry over.
 > the demo and the deck are deliberately on different indications. The demo is the reusable NCFB
 > asset; PBH stays in the deck.
 
-## What NCFB is (plain-language anchor, from the brief)
-- **NCFB = non-cystic fibrosis bronchiectasis** — a chronic lung condition where the airways
-  (bronchi) become permanently widened and damaged, leading to mucus buildup, recurrent infections,
-  and a persistent cough — *not* caused by cystic fibrosis.
+## What NCFB is (plain-language anchor, from the APSU fact sheet)
+- **NCFB = non-cystic fibrosis bronchiectasis** — a chronic lung condition where the bronchial tubes
+  (airways) become scarred and widened; mucus pools in the damaged areas and the lungs become more
+  prone to infection, and recurrent infections drive a cycle of further airway damage — *not* caused
+  by cystic fibrosis.
 - It's a **generic** demo, so copy stays disease-education-flavored and neutral; it does **not**
   carry Amylyx product specifics.
 
 > **Compliance / review — read before any client-facing use.** This is **demo copy, not approved
-> material.** The source brief contained **no clinical brief and no statistics for NCFB**, so:
-> - **No prevalence figures, statistics, or clinical claims were invented.** The "Facts About NCFB"
->   band ships with **placeholder stat cards** (`[ stat ] CONFIRM`) that must be sourced before use.
-> - Every unconfirmed item is marked inline with a small amber **`CONFIRM` / `placeholder` / `refine`**
->   flag (`.flag` class) so reviewers can see exactly what is placeholder. Remove the flags once the
->   real copy is confirmed.
-> - The partner line ("In Partnership with **[Partner — CONFIRM]**"), the offer wording, the
->   qualifying questions, consent copy, and the phone number (shown as the AmbitCare default,
->   flagged) are all placeholders pending confirmation with **Jenna / Mark / Rob**.
+> material.**
+> - **Clinical copy and the "Facts About NCFB" stat cards are now sourced** from the Australian
+>   Paediatric Surveillance Unit (APSU) fact sheet *"Non-Cystic Fibrosis Bronchiectasis — Information
+>   for Parents."* No figures were invented. **Two caveats:** that source is **Australian** and
+>   **paediatric** ("Information for Parents"), so geography-specific claims from it (e.g. Australian
+>   prevalence, Indigenous populations) were deliberately **left off** the page, and all clinical copy
+>   should still be **validated against a U.S. clinical source** before it goes in front of a client.
+>   The stat band carries a visible `verify for U.S. use` flag and cites the source in-page.
+> - The page is written **age-neutral** (self or a loved one, including a child) even though the
+>   source is paediatric; confirm the intended audience for this pitch.
+> - Remaining **non-clinical** placeholders are still flagged inline (amber `.flag`): the partner line
+>   ("In Partnership with **[Partner — CONFIRM]**"), the offer wording, the qualifying questions,
+>   consent copy, the phone number (AmbitCare default), the hero headline (`refine`), and the three
+>   `placeholder` topic-card articles — all pending confirmation with **Jenna / Mark / Rob**.
 > - Imagery is intentionally CSS/gradient only (no licensed stock photos); the hero uses a gradient
 >   rather than the Danon mother-and-son photo, which is off-indication for a lung condition.
 
@@ -84,5 +90,7 @@ Inter via Google Fonts — swap the `<link>` and font-family tokens to change it
 3. **Live vs. prototype** → real Zoho embed vs. the simulated form here.
 4. **Branding** — generic Ambit/AmbitCare look (as shipped), BioMarin-derived (as the deck), or
    Amylyx-branded? And the "In Partnership with…" partner line.
-5. **All NCFB clinical copy and every statistic** — needs a real source before client-facing use.
+5. **NCFB clinical copy and the stat cards** — now sourced from the APSU parents' fact sheet, but
+   that source is Australian and paediatric; **validate against a U.S. clinical source** before
+   client-facing use, and confirm the intended audience (age-neutral vs. caregiver/paediatric).
 6. **Contact details** — reuse AmbitCare's (as shipped) or pitch-specific.
