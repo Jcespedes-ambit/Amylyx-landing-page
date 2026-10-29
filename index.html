@@ -193,7 +193,8 @@
     .copy { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: .82rem; color: #8077a0; }
 
     /* Sticky CTA */
-    .sticky { position: fixed; right: 22px; bottom: 22px; z-index: 55; box-shadow: var(--shadow-lg); }
+    .sticky { position: fixed; right: 22px; bottom: 22px; z-index: 55; box-shadow: var(--shadow-lg); transition: opacity .25s ease, transform .25s ease; }
+    .sticky.hide { opacity: 0; transform: translateY(12px); pointer-events: none; }
     .sticky .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink); animation: pulse 2s infinite; }
     @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(35,29,58,.4);} 70%{box-shadow:0 0 0 8px rgba(35,29,58,0);} 100%{box-shadow:0 0 0 0 rgba(35,29,58,0);} }
     @media (max-width: 560px) { .sticky { right: 12px; bottom: 12px; padding: 12px 18px; font-size: .86rem; } }
@@ -417,6 +418,14 @@
     (function(){
       var f=document.getElementById('qform'), s=document.getElementById('success');
       if(f){f.addEventListener('submit',function(e){e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}f.style.display='none';s.classList.add('show');s.scrollIntoView({behavior:'smooth',block:'center'});});}
+      // Hide the floating CTA while the questionnaire is on screen (it would just duplicate the form's own button).
+      var sticky=document.querySelector('.sticky'), qn=document.getElementById('questionnaire');
+      if(sticky&&qn&&'IntersectionObserver' in window){
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(en){ sticky.classList.toggle('hide', en.isIntersecting); });
+        },{rootMargin:'0px 0px -10% 0px'});
+        io.observe(qn);
+      }
     })();
   </script>
 </body>
