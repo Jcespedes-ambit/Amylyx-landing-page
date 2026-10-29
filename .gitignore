@@ -1,0 +1,17 @@
+# Source material / not part of the website
+unpacked/
+_ref/
+*.pptx
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+.claude/
+
+# Cloudflare / node
+node_modules/
+.wrangler/

@@ -1,0 +1,10 @@
+# Cloudflare Workers — serve this repo as a static site (assets-only, no Worker script).
+# Deploying to Workers with an [assets] binding makes index.html serve directly
+# at the root. This is what turns the default "Hello world" Worker into the
+# actual landing page.
+name = "amylyx-ncfb-demo"
+compatibility_date = "2026-10-29"
+
+[assets]
+directory = "."
+# / -> index.html resolves automatically.

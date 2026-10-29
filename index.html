@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living With Chronic Cough &amp; Recurring Lung Infections? | Ambit Patient Activation</title>
+  <meta name="description" content="If you or a loved one lives with a chronic cough and recurring lung infections, non-cystic fibrosis bronchiectasis (NCFB) may be involved. Connect one-on-one with an Ambit Guide for no-cost educational support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lav: #b5acff;            /* lavender (buttons, accents) */
+      --lav-hover: #a79cfb;
+      --lav-deep: #6a5fc0;       /* violet (links/icons on light) */
+      --violet-700: #4a3f8f;
+      --ink: #231d3a;            /* near-black violet (headings, button text) */
+      --body: #514b63;
+      --soft: #efecfd;           /* light lavender tint */
+      --soft-2: #f6f4fe;
+      --line: #e9e5f8;
+      --field: #f4f2fc;
+      --white: #fff;
+      --radius: 26px;
+      --radius-sm: 12px;
+      --shadow: 0 18px 50px rgba(35,29,58,.12);
+      --shadow-lg: 0 40px 90px rgba(35,29,58,.28);
+      --maxw: 1240px;
+      --f: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--f); color: var(--body); background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { font-family: var(--f); color: var(--ink); line-height: 1.08; letter-spacing: -0.025em; font-weight: 800; }
+    a { color: var(--lav-deep); text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 26px; }
+    .arrow { display: inline-block; transition: transform .2s ease; }
+    .btn:hover .arrow, a:hover .arrow { transform: translateX(4px); }
+
+    /* Flags (unconfirmed / placeholder items — remove before client-facing use) */
+    .flag { display: inline-block; font-size: .74em; font-weight: 600; color: #8a6d1f; background: #fdf1cf; border: 1px solid #f1dd9b; border-radius: 6px; padding: 1px 8px; margin-left: 7px; vertical-align: middle; letter-spacing: 0; }
+    .flag.lav { color: var(--violet-700); background: var(--soft); border-color: var(--line); }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 9px; font-family: var(--f); font-size: .97rem; font-weight: 700; cursor: pointer; padding: 15px 28px; border-radius: 999px; border: 2px solid transparent; transition: transform .16s, box-shadow .16s, background .16s, color .16s; line-height: 1.1; letter-spacing: -0.01em; }
+    .btn-primary { background: var(--lav); color: var(--ink); }
+    .btn-primary:hover { background: var(--lav-hover); transform: translateY(-2px); box-shadow: 0 12px 26px rgba(181,172,255,.55); }
+    .btn-white { background: #fff; color: var(--ink); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-ghost-light { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.5); }
+    .btn-ghost-light:hover { background: rgba(255,255,255,.2); }
+    .btn-block { width: 100%; justify-content: center; }
+
+    /* Logo mark */
+    .mark { width: 30px; height: 30px; flex: 0 0 auto; }
+
+    /* Nav */
+    header.nav { position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav-in { display: flex; align-items: center; justify-content: space-between; gap: 18px; height: 72px; }
+    .brand { display: flex; align-items: center; gap: 11px; }
+    .brand .logo-img { height: 36px; width: auto; display: block; }
+    .brand .prog { font-weight: 500; font-size: .95rem; color: var(--body); white-space: nowrap; }
+    .brand .nm { font-weight: 800; font-size: 1.15rem; color: var(--ink); letter-spacing: -0.01em; }
+    .brand .nm .sub { font-weight: 500; color: var(--body); }
+    .sponsor { font-size: .86rem; color: var(--body); display: flex; align-items: center; }
+    .sponsor b { color: var(--ink); font-weight: 700; }
+    @media (max-width: 1000px) { .sponsor { display: none; } }
+    .nav-cta { display: flex; align-items: center; }
+    .nav-cta .btn { padding: 11px 22px; font-size: .9rem; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; color: #fff; isolation: isolate; }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -2;
+      background:
+        linear-gradient(95deg, rgba(38,30,74,.96) 0%, rgba(56,46,114,.88) 40%, rgba(92,80,162,.74) 72%, rgba(128,112,200,.64) 100%),
+        linear-gradient(120deg, #5b4fa8, #7b6bc8 60%, #9a86d8);
+      background-size: cover; background-position: center 32%; }
+    /* Soft decorative "breath" rings behind the hero content */
+    .hero::after { content: ""; position: absolute; z-index: -1; right: -120px; top: -120px; width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(181,172,255,.30), rgba(181,172,255,0) 62%); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 460px; gap: 48px; align-items: center; padding: 70px 0 80px; }
+    @media (max-width: 1040px) { .hero-grid { grid-template-columns: 1fr; gap: 34px; padding: 52px 0 60px; } }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.26); color: #fff; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; padding: 8px 15px; border-radius: 999px; margin-bottom: 22px; }
+    .hero h1 { color: #fff; font-weight: 800; font-size: clamp(2.4rem, 4.6vw, 3.9rem); margin-bottom: 22px; }
+    .hero h1 .u { box-shadow: inset 0 -0.14em 0 var(--lav); }
+    .hero p.lead { font-size: 1.12rem; color: rgba(255,255,255,.92); max-width: 46ch; margin-bottom: 28px; }
+    .hero .ctas { display: flex; flex-wrap: wrap; gap: 13px; margin-bottom: 20px; }
+    .trust { color: rgba(255,255,255,.88); font-size: .92rem; font-weight: 600; }
+
+    /* Form card */
+    .card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 34px; color: var(--body); }
+    .card h3 { font-size: 1.42rem; color: var(--ink); margin-bottom: 10px; letter-spacing: -0.02em; }
+    .card .mins { display: flex; align-items: center; gap: 7px; color: var(--lav-deep); font-weight: 600; font-size: .86rem; margin-bottom: 16px; }
+    .card .intro { font-size: .92rem; margin-bottom: 20px; }
+    .fg { margin-bottom: 15px; }
+    .fg label { display: block; font-weight: 600; font-size: .84rem; color: var(--ink); margin-bottom: 6px; }
+    .fg label .opt { font-weight: 400; color: var(--body); }
+    .fg .hint { font-size: .76rem; color: #908aa0; margin-top: 5px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    @media (max-width: 420px) { .two { grid-template-columns: 1fr; } }
+    input, select { width: 100%; font-family: var(--f); font-size: .95rem; padding: 12px 13px; border: 1.5px solid transparent; border-radius: var(--radius-sm); background: var(--field); color: var(--ink); transition: border .15s, box-shadow .15s; }
+    input::placeholder { color: #a7a1b8; }
+    input:focus, select:focus { outline: none; border-color: var(--lav); box-shadow: 0 0 0 3px rgba(181,172,255,.35); background: #fff; }
+    .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .82rem; color: var(--body); margin: 16px 0 18px; }
+    .consent input { width: auto; margin-top: 3px; }
+    .card .note { text-align: center; font-size: .76rem; color: #a09aaf; margin-top: 12px; }
+    .success { display: none; text-align: center; padding: 22px 6px; }
+    .success.show { display: block; }
+    .success .ok { width: 68px; height: 68px; border-radius: 50%; background: var(--soft); color: var(--lav-deep); display: grid; place-items: center; margin: 0 auto 18px; }
+    .success h3 { margin-bottom: 10px; }
+
+    /* Generic sections */
+    section.band { padding: 86px 0; }
+    .band.tint { background: var(--soft-2); }
+    .head { max-width: 720px; margin: 0 auto 50px; text-align: center; }
+    .head.left { margin: 0 0 30px; text-align: left; }
+    .kicker { display: inline-block; font-weight: 700; font-size: .78rem; letter-spacing: .13em; text-transform: uppercase; color: var(--lav-deep); margin-bottom: 13px; }
+    .head h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: 14px; }
+    .head p { font-size: 1.07rem; color: var(--body); }
+
+    /* Feature row */
+    .feat { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+    @media (max-width: 860px) { .feat { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
+    .feat .c { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: var(--shadow); }
+    .feat .ic { width: 54px; height: 54px; border-radius: 14px; background: var(--soft); color: var(--lav-deep); display: grid; place-items: center; margin-bottom: 18px; }
+    .feat h3 { font-size: 1.15rem; margin-bottom: 9px; }
+    .feat p { font-size: .96rem; }
+
+    /* Two-column */
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; }
+    @media (max-width: 900px) { .row2 { grid-template-columns: 1fr; gap: 34px; } }
+    .prose p { margin-bottom: 16px; font-size: 1.05rem; }
+    .prose p strong { color: var(--ink); }
+    .checks { list-style: none; display: grid; gap: 13px; }
+    .checks li { display: flex; gap: 12px; align-items: flex-start; font-size: .98rem; color: var(--ink); }
+    .checks .ic { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: var(--soft); color: var(--lav-deep); display: grid; place-items: center; }
+    .panel { background: var(--soft); border-radius: 22px; padding: 36px; }
+    .panel h3 { font-size: 1.3rem; margin-bottom: 18px; }
+    .notice { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--lav); border-radius: 12px; padding: 15px 18px; font-size: .9rem; margin: 22px 0; }
+    .notice b { color: var(--ink); }
+    .contact { list-style: none; display: grid; gap: 11px; margin: 22px 0; }
+    .contact li { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 600; }
+    .contact .ic { width: 34px; height: 34px; border-radius: 10px; background: var(--soft); color: var(--lav-deep); display: grid; place-items: center; flex: 0 0 auto; }
+
+    /* Value-prop strip */
+    .vstrip { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 6px; }
+    .vstrip span { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: .86rem; font-weight: 600; color: var(--ink); }
+    .vstrip span .ic { width: 15px; height: 15px; color: var(--lav-deep); }
+
+    /* Stats */
+    .stats { background: linear-gradient(135deg, var(--violet-700), #2f2550); color: #fff; }
+    .stats .head h2, .stats .head p { color: #fff; }
+    .stats .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    @media (max-width: 760px) { .stats .grid { grid-template-columns: 1fr 1fr; } }
+    .stats .s { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 18px; padding: 26px; }
+    .stats .s .n { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px; color: var(--lav); }
+    .stats .s p { font-size: .9rem; color: rgba(255,255,255,.8); }
+    .stats .foot { text-align: center; margin-top: 30px; font-size: .86rem; color: rgba(255,255,255,.75); }
+
+    /* Topic cards */
+    .cards3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+    @media (max-width: 860px) { .cards3 { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
+    .tcard { background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: transform .16s, box-shadow .16s; }
+    .tcard:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .tcard .top { height: 120px; background: linear-gradient(135deg, var(--lav), var(--lav-deep)); display: grid; place-items: center; color: rgba(255,255,255,.9); }
+    .tcard .top.b { background: linear-gradient(135deg, #8b7ad4, var(--violet-700)); }
+    .tcard .top.c { background: linear-gradient(135deg, #a99cf0, #6a5fc0); }
+    .tcard .top .icon { width: 40px; height: 40px; }
+    .tcard .bd { padding: 24px; }
+    .tcard .cat { font-weight: 700; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--lav-deep); margin-bottom: 10px; }
+    .tcard h4 { font-size: 1.1rem; margin-bottom: 10px; }
+    .tcard p { font-size: .94rem; margin-bottom: 15px; }
+    .more { font-weight: 700; display: inline-flex; gap: 6px; align-items: center; }
+
+    /* Final CTA */
+    .final { background: linear-gradient(120deg, var(--lav-deep), var(--violet-700)); color: #fff; text-align: center; }
+    .final h2 { color: #fff; font-size: clamp(2rem,4vw,3rem); margin-bottom: 14px; }
+    .final p { color: rgba(255,255,255,.92); max-width: 620px; margin: 0 auto 26px; font-size: 1.08rem; }
+    .final .ctas { display: flex; gap: 13px; justify-content: center; flex-wrap: wrap; }
+    .final .fcontact { margin-top: 26px; font-size: .9rem; color: rgba(255,255,255,.82); display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .final .fcontact a { color: #fff; font-weight: 600; }
+
+    /* Footer */
+    footer { background: #1d1833; color: #b4acce; padding: 58px 0 30px; font-size: .92rem; }
+    .ft { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 32px; }
+    @media (max-width: 760px) { .ft { grid-template-columns: 1fr 1fr; } }
+    footer .brand .nm { color: #fff; }
+    footer .brand .nm .sub { color: #b4acce; }
+    .ft h4 { color: #fff; font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 15px; }
+    .ft ul { list-style: none; }
+    .ft li { margin-bottom: 9px; }
+    .ft a { color: #c4bce0; }
+    .ft a:hover { color: #fff; }
+    .ft .blurb { font-size: .9rem; margin-top: 12px; max-width: 34ch; }
+    .disc { border-top: 1px solid #332a52; padding-top: 22px; font-size: .78rem; color: #8077a0; line-height: 1.7; }
+    .copy { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: .82rem; color: #8077a0; }
+
+    /* Sticky CTA */
+    .sticky { position: fixed; right: 22px; bottom: 22px; z-index: 55; box-shadow: var(--shadow-lg); }
+    .sticky .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(35,29,58,.4);} 70%{box-shadow:0 0 0 8px rgba(35,29,58,0);} 100%{box-shadow:0 0 0 0 rgba(35,29,58,0);} }
+    @media (max-width: 560px) { .sticky { right: 12px; bottom: 12px; padding: 12px 18px; font-size: .86rem; } }
+
+    .icon { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+</head>
+<body>
+
+  <!-- icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-lungs" viewBox="0 0 24 24"><path d="M12 3v9"/><path d="M8.5 7C7 7 6 8.6 6 10.6c0 1.6-1 3.1-1.8 4.4C3.4 16.3 3 17.4 3 18.5 3 20.2 4.3 21.5 6 21.5c1.4 0 2.5-1.1 2.5-2.5V11.2C8.5 8.9 9.6 7 8.5 7z"/><path d="M15.5 7C17 7 18 8.6 18 10.6c0 1.6 1 3.1 1.8 4.4.8 1.4 1.2 2.5 1.2 3.5 0 1.7-1.3 3-3 3-1.4 0-2.5-1.1-2.5-2.5V11.2C15.5 8.9 14.4 7 15.5 7z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  </svg>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a href="#top" class="brand">
+        <img src="data:image/webp;base64,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" alt="AmbitCare" class="logo-img" />
+        <span class="prog">· Patient Activation</span>
+      </a>
+      <div class="sponsor">In Partnership with&nbsp;<b>[Partner</b><span class="flag">CONFIRM</span><b>]</b></div>
+      <div class="nav-cta"><a href="#questionnaire" class="btn btn-primary">Start Questionnaire <span class="arrow">→</span></a></div>
+    </div>
+  </header>
+  <span id="top"></span>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><svg class="icon" style="width:15px;height:15px"><use href="#i-lungs"/></svg> Bronchiectasis &amp; Your Lungs</span>
+        <h1>Living with <span class="u">chronic cough</span> and recurring lung infections?<span class="flag">refine</span></h1>
+        <p class="lead">
+          A cough that won't go away, bringing up mucus most days, and lung infections that keep
+          coming back can be signs of <strong>non-cystic fibrosis bronchiectasis (NCFB)</strong>, a
+          long-term condition in which the airways become widened and more prone to infection. An
+          Ambit Guide can talk it through with you and connect you with no-cost educational support,
+          with no cost and no obligation.<span class="flag">CONFIRM clinical specifics</span>
+        </p>
+        <div class="ctas">
+          <a href="#questionnaire" class="btn btn-primary">Start Questionnaire <span class="arrow">→</span></a>
+          <a href="#guide" class="btn btn-white">Meet Your Guide <span class="arrow">→</span></a>
+        </div>
+        <div class="trust">No-cost · Educational support · No obligations</div>
+      </div>
+
+      <!-- Questionnaire / Form card -->
+      <div class="card" id="questionnaire">
+        <h3>See If You Qualify for No-Cost Support<span class="flag">CONFIRM offer</span></h3>
+        <div class="mins"><svg class="icon" style="width:16px;height:16px"><use href="#i-clock"/></svg> Takes about 5 minutes</div>
+        <p class="intro">Complete the short form below if you or a loved one lives with a chronic cough and recurring lung infections<span class="flag">symptom / criteria — CONFIRM</span> and would like to speak with an Ambit Guide. We'll connect you, one on one, for no-cost educational support.</p>
+        <form id="qform" novalidate>
+          <div class="two">
+            <div class="fg"><label for="fn">First name</label><input id="fn" type="text" autocomplete="given-name" required /></div>
+            <div class="fg"><label for="ln">Last name</label><input id="ln" type="text" autocomplete="family-name" required /></div>
+          </div>
+          <div class="fg"><label for="em">Email</label><input id="em" type="email" autocomplete="email" required /></div>
+          <div class="two">
+            <div class="fg"><label for="zip">ZIP / postal code</label><input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" required /><div class="hint">Used to help match you with nearby resources.</div></div>
+            <div class="fg"><label for="ph">Phone <span class="opt">(optional)</span></label><input id="ph" type="tel" autocomplete="tel" /></div>
+          </div>
+          <div class="two">
+            <div class="fg"><label for="rel">I am a</label>
+              <select id="rel" required><option value="" selected disabled>Choose one</option><option>Patient (myself)</option><option>Caregiver</option><option>Other</option></select>
+            </div>
+            <div class="fg"><label for="help">I'd like help with</label>
+              <select id="help"><option value="" selected disabled>Choose one</option><option>Understanding my symptoms</option><option>Educational support &amp; counseling</option><option>Talking to my care team</option><option>Not sure yet</option></select>
+            </div>
+          </div>
+          <!-- Condition-specific qualifying questions to be confirmed with Jenna/Mark before client-facing use -->
+          <div class="fg"><label for="qual">Have you had a chronic cough or repeated lung infections for more than a few months?<span class="flag">qualifying Qs — CONFIRM</span></label>
+            <select id="qual"><option value="" selected disabled>Choose one</option><option>Yes</option><option>No</option><option>Not sure</option></select>
+          </div>
+          <label class="consent"><input type="checkbox" id="consent" /><span>I agree to be contacted about NCFB educational support and to have my information shared with a participating Ambit Guide to connect me with resources.<span class="flag">consent copy — CONFIRM</span></span></label>
+          <button type="submit" class="btn btn-primary btn-block">Start my questionnaire <span class="arrow">→</span></button>
+          <p class="note">Demo prototype. No real data is collected or stored.</p>
+        </form>
+        <div class="success" id="success">
+          <div class="ok"><svg class="icon" style="width:30px;height:30px"><use href="#i-check"/></svg></div>
+          <h3>Thank you. You're all set.</h3>
+          <p>An Ambit Guide will reach out shortly to discuss next steps and the no-cost educational support available to you.</p>
+          <p style="font-size:.8rem;color:#a09aaf;margin-top:8px">(Demo: this would create a new patient at the intake stage in the CRM.)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="band">
+    <div class="wrap feat">
+      <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-lungs"/></svg></div><h3>A lung condition with a name</h3><p>A chronic cough, daily mucus, and infections that keep returning can point to non-cystic fibrosis bronchiectasis (NCFB).<span class="flag">CONFIRM</span></p></div>
+      <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-heart"/></svg></div><h3>No-cost educational support</h3><p>Talk through what NCFB is, what questions to ask, and what support may be available, at no cost to you.<span class="flag">CONFIRM offer</span></p></div>
+      <div class="c"><div class="ic"><svg class="icon" style="width:26px;height:26px"><use href="#i-user"/></svg></div><h3>A real person to guide you</h3><p>An Ambit Guide is a real person, not a bot, who helps you understand your options with no pressure and no obligations.</p></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="band tint">
+    <div class="wrap row2">
+      <div class="prose">
+        <span class="kicker">About the Condition</span>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:20px">About Non-Cystic Fibrosis Bronchiectasis (NCFB)</h2>
+        <p><strong>Bronchiectasis</strong> is a long-term lung condition in which the airways (the bronchi) become permanently widened and damaged. That makes it harder to clear mucus, so mucus builds up and the lungs become more prone to infection, leading to a cough that lingers and infections that keep coming back.<span class="flag">CONFIRM clinical content</span></p>
+        <p><strong>"Non-cystic fibrosis"</strong> simply means this form is <em>not</em> caused by cystic fibrosis. It can develop for a number of reasons, and sometimes a cause is never found.<span class="flag">CONFIRM clinical content</span></p>
+        <p>Because the symptoms can look like other common chest problems, bronchiectasis is sometimes overlooked, and people can go a long time without a clear explanation. Speaking with an Ambit Guide is a simple first step toward understanding your symptoms and the support that may be available.<span class="flag">CONFIRM clinical content</span></p>
+        <p style="margin-top:22px"><a href="#questionnaire" class="btn btn-primary">Start Questionnaire <span class="arrow">→</span></a></p>
+      </div>
+      <div class="panel">
+        <h3>Signs people often notice<span class="flag">CONFIRM</span></h3>
+        <ul class="checks">
+          <li><span class="ic"><svg class="icon"><use href="#i-check"/></svg></span><span>A cough that doesn't go away</span></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-check"/></svg></span><span>Coughing up mucus most days</span></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-check"/></svg></span><span>Chest infections that keep coming back</span></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-check"/></svg></span><span>Feeling short of breath or tired</span></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-check"/></svg></span><span>Symptoms often mistaken for other chest conditions</span></li>
+        </ul>
+        <p style="font-size:.78rem;color:var(--body);margin-top:16px">Educational list only — confirm with a clinical source before client-facing use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="band stats">
+    <div class="wrap">
+      <div class="head"><h2>The Facts About NCFB</h2><p>Research-backed context to help you understand the broader picture.</p></div>
+      <div class="grid">
+        <div class="s"><div class="n">[ stat ]<span class="flag">CONFIRM</span></div><p>Placeholder statistic — source before client-facing use.</p></div>
+        <div class="s"><div class="n">[ stat ]<span class="flag">CONFIRM</span></div><p>Placeholder statistic — source before client-facing use.</p></div>
+        <div class="s"><div class="n">[ stat ]<span class="flag">CONFIRM</span></div><p>Placeholder statistic — source before client-facing use.</p></div>
+        <div class="s"><div class="n">[ stat ]<span class="flag">CONFIRM</span></div><p>Placeholder statistic — source before client-facing use.</p></div>
+      </div>
+      <p class="foot">No NCFB statistics were supplied in the brief. All figures are placeholders and must be sourced and confirmed before any client-facing use — do not present fabricated numbers.</p>
+    </div>
+  </section>
+
+  <!-- Guide -->
+  <section id="guide" class="band">
+    <div class="wrap row2">
+      <div class="panel">
+        <h3>Talk to an Ambit Guide</h3>
+        <div class="vstrip">
+          <span><svg class="icon ic"><use href="#i-chat"/></svg> Talk to a Guide</span>
+          <span><svg class="icon ic"><use href="#i-heart"/></svg> Access no-cost support</span>
+          <span><svg class="icon ic"><use href="#i-user"/></svg> Speak one-on-one</span>
+          <span><svg class="icon ic"><use href="#i-check"/></svg> Get answers</span>
+          <span><svg class="icon ic"><use href="#i-shield"/></svg> Support for you or a loved one</span>
+          <span><svg class="icon ic"><use href="#i-check"/></svg> Move forward with confidence</span>
+        </div>
+      </div>
+      <div class="prose">
+        <span class="kicker">Meet Your Ambit Guide · <span style="color:var(--ink)">Guides Available Now</span></span>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:18px">A real person, here to help</h2>
+        <p>Maybe you were just told you have bronchiectasis, or maybe you've been living with an unexplained cough and repeated infections for years. Either way, an Ambit Guide is here to help you understand your symptoms and the support available. Fill out the short questionnaire and we'll pair you with a Guide, a real person, for no-cost educational support.</p>
+        <ul class="contact">
+          <li><span class="ic"><svg class="icon"><use href="#i-mail"/></svg></span> <a href="mailto:guide@ambitcare.com">guide@ambitcare.com</a></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-phone"/></svg></span> <a href="tel:1-877-584-8995">1-877-584-8995</a> <span class="flag">confirm — AmbitCare default</span></li>
+          <li><span class="ic"><svg class="icon"><use href="#i-clock"/></svg></span> Monday–Friday, 9am–5pm ET</li>
+        </ul>
+        <div class="notice"><b>Important Notice:</b> Ambit Guides are not medical providers. They can neither diagnose any disease or disorder nor endorse or recommend any specific medical treatments.</div>
+        <a href="#questionnaire" class="btn btn-primary">Start Questionnaire <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topics -->
+  <section class="band tint">
+    <div class="wrap">
+      <div class="head"><h2>Explore NCFB Topics</h2><p>Plain-language education about bronchiectasis, recurring infections, and talking to your care team.</p></div>
+      <div class="cards3">
+        <div class="tcard"><div class="top"><svg class="icon"><use href="#i-lungs"/></svg></div><div class="bd"><div class="cat">Education</div><h4>What Is Bronchiectasis (and What Isn't)?</h4><p>A plain-language look at what NCFB is, how it differs from cystic fibrosis, and why the airways are affected.<span class="flag">placeholder</span></p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
+        <div class="tcard"><div class="top b"><svg class="icon"><use href="#i-shield"/></svg></div><div class="bd"><div class="cat">Symptoms</div><h4>Why Recurring Infections Shouldn't Be Ignored</h4><p>How repeated chest infections and a lingering cough can point to an underlying lung condition worth looking into.<span class="flag">placeholder</span></p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
+        <div class="tcard"><div class="top c"><svg class="icon"><use href="#i-chat"/></svg></div><div class="bd"><div class="cat">Next Steps</div><h4>Talking to Your Care Team About Your Lungs</h4><p>Questions to bring to an appointment and how to describe symptoms so you get clearer answers.<span class="flag">placeholder</span></p><a href="#questionnaire" class="more">Read Article <span class="arrow">→</span></a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="band final">
+    <div class="wrap">
+      <div class="head"><h2 style="color:#fff">You don't have to figure this out alone.</h2><p>An Ambit Guide is ready to offer one-on-one support, clear information, and resources to help you take charge of your (or your loved one's) lung health. Start the conversation today.</p></div>
+      <div class="ctas">
+        <a href="#questionnaire" class="btn btn-white">Complete the Questionnaire <span class="arrow">→</span></a>
+        <a href="mailto:guide@ambitcare.com" class="btn btn-ghost-light">Email Us Instead</a>
+      </div>
+      <div class="fcontact">
+        <span><a href="tel:1-877-584-8995">1-877-584-8995</a> <span class="flag">confirm</span></span>
+        <span><a href="mailto:guide@ambitcare.com">guide@ambitcare.com</a></span>
+        <span>Mon–Fri, 9am–5pm ET</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="ft">
+        <div>
+          <a href="#top" class="brand"><span class="nm">AMBIT<span class="sub"> · Patient Activation</span></span></a>
+          <p class="blurb">Matching patients and caregivers with no-cost educational support and resources for non-cystic fibrosis bronchiectasis (NCFB).</p>
+        </div>
+        <div><h4>Quick Links</h4><ul><li><a href="#about">About the Condition</a></li><li><a href="#guide">Your Ambit Guide</a></li><li><a href="#questionnaire">Start Questionnaire</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="#questionnaire">FAQs</a></li><li><a href="#questionnaire">Terms &amp; Conditions</a></li><li><a href="#questionnaire">Privacy Policy</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><a href="mailto:guide@ambitcare.com">guide@ambitcare.com</a></li><li><a href="tel:1-877-584-8995">1-877-584-8995</a></li><li>Mon–Fri, 9am–5pm ET</li></ul></div>
+      </div>
+      <div class="disc">This site is intended for U.S. residents only. Ambit is not a medical provider nor a health care facility. Ambit can neither diagnose any disease or disorder nor endorse or recommend any specific medical treatments. Individuals must rely on the personal and individualized medical advice of their qualified health care professionals before making any decisions about their care.</div>
+      <div class="copy"><span>© 2026 AmbitCare. All Rights Reserved.</span><span>In Partnership with [Partner — CONFIRM]</span></div>
+    </div>
+  </footer>
+
+  <a href="#questionnaire" class="btn btn-primary sticky"><span class="dot"></span> Start Questionnaire <span class="arrow">→</span></a>
+
+  <script>
+    (function(){
+      var f=document.getElementById('qform'), s=document.getElementById('success');
+      if(f){f.addEventListener('submit',function(e){e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}f.style.display='none';s.classList.add('show');s.scrollIntoView({behavior:'smooth',block:'center'});});}
+    })();
+  </script>
+</body>
+</html>

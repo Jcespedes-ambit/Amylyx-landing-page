@@ -1,0 +1,8 @@
+# Files in the repo root that should NOT be served as part of the public site.
+# (Uses .gitignore-style patterns.)
+README.md
+.gitignore
+.assetsignore
+wrangler.toml
+amylyx-ncfb-demo-landing-page-spec.md
+.claude/
