@@ -76,7 +76,9 @@
         linear-gradient(95deg, rgba(38,30,74,.95) 0%, rgba(56,46,114,.84) 38%, rgba(74,63,143,.54) 70%, rgba(92,80,162,.38) 100%),
         var(--hero-photo),
         linear-gradient(120deg, #5b4fa8, #7b6bc8 60%, #9a86d8);
-      background-size: cover; background-position: center 30%; }
+      background-size: 125%; background-position: 100% 16%; }
+    /* On stacked/narrow layouts, fall back to a centered cover crop */
+    @media (max-width: 1040px) { .hero::before { background-size: cover; background-position: 62% 20%; } }
     /* Soft decorative "breath" rings behind the hero content */
     .hero::after { content: ""; position: absolute; z-index: -1; right: -120px; top: -120px; width: 520px; height: 520px; border-radius: 50%;
       background: radial-gradient(circle, rgba(181,172,255,.30), rgba(181,172,255,0) 62%); pointer-events: none; }
