@@ -7,6 +7,9 @@ automatically. Until a file exists, the page falls back to a purple gradient (no
 |------|---------|-------------|--------|
 | `hero.webp` | Hero background (behind the purple overlay) | ~2000 × 1200 (5:3), landscape | WebP or JPG |
 | `guide.webp` | "Meet Your Ambit Guide" portrait card | ~1200 × 750 (16:10), landscape | WebP or JPG |
+| `topic-1.webp` | "Explore Topics" card 1 (Education) thumbnail | ~800 × 450 (16:9), landscape | WebP or JPG |
+| `topic-2.webp` | "Explore Topics" card 2 (Symptoms) thumbnail | ~800 × 450 (16:9), landscape | WebP or JPG |
+| `topic-3.webp` | "Explore Topics" card 3 (Next Steps) thumbnail | ~800 × 450 (16:9), landscape | WebP or JPG |
 
 Notes
 - The hero image sits **behind** a dark-violet gradient that is strongest on the left (where the
