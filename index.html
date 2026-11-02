@@ -255,37 +255,117 @@
         <h3>See If You Qualify for No-Cost Support</h3>
         <div class="mins"><svg class="icon" style="width:16px;height:16px"><use href="#i-clock"/></svg> Takes about 5 minutes</div>
         <p class="intro">Complete the short form below if you or a loved one lives with a chronic cough and recurring lung infections and would like to speak with an Ambit Guide. We'll connect you, one on one, for no-cost educational support.</p>
-        <form id="qform" novalidate>
-          <div class="two">
-            <div class="fg"><label for="fn">First name</label><input id="fn" type="text" autocomplete="given-name" required /></div>
-            <div class="fg"><label for="ln">Last name</label><input id="ln" type="text" autocomplete="family-name" required /></div>
-          </div>
-          <div class="fg"><label for="em">Email</label><input id="em" type="email" autocomplete="email" required /></div>
-          <div class="two">
-            <div class="fg"><label for="zip">ZIP / postal code</label><input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" required /><div class="hint">Used to help match you with nearby resources.</div></div>
-            <div class="fg"><label for="ph">Phone <span class="opt">(optional)</span></label><input id="ph" type="tel" autocomplete="tel" /></div>
-          </div>
-          <div class="two">
-            <div class="fg"><label for="rel">I am a</label>
-              <select id="rel" required><option value="" selected disabled>Choose one</option><option>Patient (myself)</option><option>Caregiver</option><option>Other</option></select>
-            </div>
-            <div class="fg"><label for="help">I'd like help with</label>
-              <select id="help"><option value="" selected disabled>Choose one</option><option>Understanding my symptoms</option><option>Educational support &amp; counseling</option><option>Talking to my care team</option><option>Not sure yet</option></select>
-            </div>
-          </div>
-          <div class="fg"><label for="qual">Have you had a chronic cough or repeated lung infections for more than a few months?</label>
-            <select id="qual"><option value="" selected disabled>Choose one</option><option>Yes</option><option>No</option><option>Not sure</option></select>
-          </div>
-          <label class="consent"><input type="checkbox" id="consent" /><span>I agree to be contacted about NCFB educational support and to have my information shared with a participating Ambit Guide to connect me with resources.</span></label>
-          <button type="submit" class="btn btn-primary btn-block">Start my questionnaire <span class="arrow">→</span></button>
-          <p class="note">Demo prototype. No real data is collected or stored.</p>
-        </form>
-        <div class="success" id="success">
-          <div class="ok"><svg class="icon" style="width:30px;height:30px"><use href="#i-check"/></svg></div>
-          <h3>Thank you. You're all set.</h3>
-          <p>An Ambit Guide will reach out shortly to discuss next steps and the no-cost educational support available to you.</p>
-          <p style="font-size:.8rem;color:#a09aaf;margin-top:8px">(Demo: this would create a new patient at the intake stage in the CRM.)</p>
+        <!-- Zoho native CRM webform embed -->
+        <div id="zf_div_WG_8KkW7VxR5BwRa1XPYNxFU_dRrxChTTH0DObNdduQ">
         </div>
+        <script type="text/javascript">
+        (function() {
+        	try{
+        		var f = document.createElement("iframe");
+
+        			var ifrmSrc = 'https://forms.zohopublic.com/demoambitinc1/form/GeneralViewDemo/formperma/WG_8KkW7VxR5BwRa1XPYNxFU_dRrxChTTH0DObNdduQ?zf_rszfm=1';
+
+
+                try{
+        			if ( typeof ZFAdvLead != "undefined" && typeof zfutm_zfAdvLead != "undefined" ) {
+        				for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+        				    var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+        				    utmPm = ( ZFAdvLead.isSameDomian && ( ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1 ) ) ? "zf_" + utmPm : utmPm;
+        				    var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+        				    if ( typeof utmVal !== "undefined" ) {
+        				      if ( utmVal != "" ) {
+        				        if(ifrmSrc.indexOf('?') > 0){
+        				             ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;
+        				        }else{
+        				            ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;
+        				        }
+        				      }
+        				    }
+        				}
+        			}
+        			if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
+        				for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+        		        	var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+        		        	var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+        			        if ( typeof utmVal !== "undefined" ) {
+        			          if ( utmVal != "" ){
+        			            if(ifrmSrc.indexOf('?') > 0){
+        			              ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;//No I18N
+        			            }else{
+        			              ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;//No I18N
+        			            }
+        			          }
+        			        }
+        		      	}
+        			}
+        			if (!((new RegExp("[?&]referrername=")).test(ifrmSrc))) {
+                    var rfr = window.location.href;
+
+                    try {
+                        rfr = window.self !== window.top ?
+                            window.top.location.href :
+                            (/^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr) ? rfr : "");
+                    } catch (e) {}
+
+                    if (rfr && rfr !== "") {
+                        if (rfr.length > 1800) {
+                            var queryIndex = rfr.indexOf('?');
+                            if (queryIndex > -1) {
+                                rfr = rfr.substring(0, queryIndex);
+                            }
+                            if (rfr.length > 1800) {
+                                rfr = rfr.substring(0, 1800);
+                            }
+                        }
+                        ifrmSrc += ((ifrmSrc.indexOf('?') > 0) ? '&' : '?') + 'referrername=' + encodeURIComponent(rfr);
+                    }
+                }
+        		}catch(e){}
+
+
+        		f.src = ifrmSrc;
+        		f.style.border="none";
+        		f.style.height="367px";
+        		f.style.width="99%";
+        		f.style.transition="all 0.5s ease";
+        		f.setAttribute("aria-label", 'General View Demo');
+
+        		var d = document.getElementById("zf_div_WG_8KkW7VxR5BwRa1XPYNxFU_dRrxChTTH0DObNdduQ");
+        		d.appendChild(f);
+        		window.addEventListener('message', function (){
+        			var evntData = event.data;
+        			if( evntData && evntData.constructor == String ){
+        				var zf_ifrm_data = evntData.split("|");
+        				if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+        					var zf_perma = zf_ifrm_data[0];
+        					var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+        					var iframe = document.getElementById("zf_div_WG_8KkW7VxR5BwRa1XPYNxFU_dRrxChTTH0DObNdduQ").getElementsByTagName("iframe")[0];
+        					if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+        						var prevIframeHeight = iframe.style.height;
+        						var zf_tout = false;
+        						if( zf_ifrm_data.length == 3 ) {
+        						    iframe.scrollIntoView();
+        						    zf_tout = true;
+        						}
+
+        						if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+        							if( zf_tout ) {
+        							    setTimeout(function(){
+        							        iframe.style.height = zf_ifrm_ht_nw;
+        							    },500);
+        							} else {
+        							    iframe.style.height = zf_ifrm_ht_nw;
+        							}
+        						}
+        					}
+        				}
+        			}
+        		}, false);
+            }catch(e){}
+
+
+        })();
+        </script>
       </div>
     </div>
   </section>
@@ -416,9 +496,7 @@
 
   <script>
     (function(){
-      var f=document.getElementById('qform'), s=document.getElementById('success');
-      if(f){f.addEventListener('submit',function(e){e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}f.style.display='none';s.classList.add('show');s.scrollIntoView({behavior:'smooth',block:'center'});});}
-      // Hide the floating CTA while the questionnaire is on screen (it would just duplicate the form's own button).
+      // Hide the floating CTA while the questionnaire (Zoho form) is on screen.
       var sticky=document.querySelector('.sticky'), qn=document.getElementById('questionnaire');
       if(sticky&&qn&&'IntersectionObserver' in window){
         var io=new IntersectionObserver(function(entries){
