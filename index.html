@@ -27,6 +27,10 @@
       --shadow-lg: 0 40px 90px rgba(35,29,58,.28);
       --maxw: 1240px;
       --f: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+      /* Hero background photo — drop images/hero.webp in to use it; gradient shows if it's absent */
+      --hero-photo: url('images/hero.webp');
+      /* Guide portrait — drop images/guide.webp in; gradient shows if it's absent */
+      --guide-photo: url('images/guide.webp');
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -69,9 +73,10 @@
     .hero { position: relative; overflow: hidden; color: #fff; isolation: isolate; }
     .hero::before { content: ""; position: absolute; inset: 0; z-index: -2;
       background:
-        linear-gradient(95deg, rgba(38,30,74,.96) 0%, rgba(56,46,114,.88) 40%, rgba(92,80,162,.74) 72%, rgba(128,112,200,.64) 100%),
+        linear-gradient(95deg, rgba(38,30,74,.95) 0%, rgba(56,46,114,.84) 38%, rgba(74,63,143,.54) 70%, rgba(92,80,162,.38) 100%),
+        var(--hero-photo),
         linear-gradient(120deg, #5b4fa8, #7b6bc8 60%, #9a86d8);
-      background-size: cover; background-position: center 32%; }
+      background-size: cover; background-position: center 30%; }
     /* Soft decorative "breath" rings behind the hero content */
     .hero::after { content: ""; position: absolute; z-index: -1; right: -120px; top: -120px; width: 520px; height: 520px; border-radius: 50%;
       background: radial-gradient(circle, rgba(181,172,255,.30), rgba(181,172,255,0) 62%); pointer-events: none; }
@@ -143,6 +148,7 @@
     .vstrip { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 6px; }
     .vstrip span { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: .86rem; font-weight: 600; color: var(--ink); }
     .vstrip span .ic { width: 15px; height: 15px; color: var(--lav-deep); }
+    .guide-photo { border-radius: 18px; aspect-ratio: 16/10; margin-bottom: 22px; background-image: var(--guide-photo), linear-gradient(135deg, var(--lav), var(--lav-deep)); background-size: cover; background-position: center; box-shadow: var(--shadow); }
 
     /* Stats */
     .stats { background: linear-gradient(135deg, var(--violet-700), #2f2550); color: #fff; }
@@ -422,6 +428,7 @@
   <section id="guide" class="band">
     <div class="wrap row2">
       <div class="panel">
+        <div class="guide-photo" role="img" aria-label="Your Ambit Guide"></div>
         <h3>Talk to an Ambit Guide</h3>
         <div class="vstrip">
           <span><svg class="icon ic"><use href="#i-chat"/></svg> Talk to a Guide</span>
